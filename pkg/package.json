@@ -1,15 +1,17 @@
 {
   "name": "redux-tab-connect",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight Redux middleware to sync state across browser tabs using BroadcastChannel API",
   "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc && tsc -p tsconfig.esm.json",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc",
+    "build:esm": "tsc -p tsconfig.esm.json",
     "build:watch": "tsc --watch",
     "prepublishOnly": "npm run build",
     "clean": "rm -rf dist"
@@ -59,10 +61,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/m-asad961/redux-tab-connect.git"
+    "url": "https://github.com/MAsad961/redux-tab-connect.git"
   },
   "bugs": {
-    "url": "https://github.com/m-asad961/redux-tab-connect/issues"
+    "url": "https://github.com/MAsad961/redux-tab-connect/issues"
   },
-  "homepage": "https://github.com/m-asad961/redux-tab-connect#readme"
+  "homepage": "https://github.com/MAsad961/redux-tab-connect#readme"
 }
