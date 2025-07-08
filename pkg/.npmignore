@@ -1,0 +1,9 @@
+node_modules
+src
+.babelrc
+tsconfig.json
+tsconfig.esm.json
+*.tsbuildinfo
+.DS_Store
+.git
+.gitignore
